@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>TaskFlow</title><link rel="stylesheet" href="css/styles.css"></head>
+<body>
+<main class="container">
+  <header><p class="eyebrow">TASKFLOW</p><h1>Plan less. Finish more.</h1><p>Organize every task in one focused workspace.</p></header>
+  <section class="panel" aria-labelledby="create-heading"><h2 id="create-heading">Create a task</h2>
+    <form id="task-form">
+      <label>Title<input name="title" required maxlength="80"></label>
+      <label>Description<textarea name="description" maxlength="240"></textarea></label>
+      <div class="grid"><label>Category<input name="category" value="General"></label><label>Priority<select name="priority"><option>Low</option><option selected>Medium</option><option>High</option></select></label><label>Due date<input name="dueDate" type="date" required></label></div>
+      <button type="submit">Add task</button>
+    </form>
+  </section>
+  <section class="panel"><div class="list-heading"><h2>Your tasks</h2><input id="search" type="search" placeholder="Search tasks" aria-label="Search tasks"></div><p id="message" role="status"></p><ul id="task-list" aria-live="polite"></ul></section>
+</main><script type="module" src="src/app.js"></script></body></html>
