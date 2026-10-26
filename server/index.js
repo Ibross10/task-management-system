@@ -1,8 +1,11 @@
 import express from 'express';
 import cors from 'cors';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { listTasks, createTask, updateTask, deleteTask } from './store.js';
 
 export const app = express();
+const here = path.dirname(fileURLToPath(import.meta.url));
 app.use(cors());
 app.use(express.json({ limit: '32kb' }));
 
@@ -65,6 +68,16 @@ app.delete('/api/tasks/:id', async (req, res, next) => {
     return res.json({ deleted: true, id: req.params.id });
   } catch (e) { next(e); }
 });
+if (process.env.NODE_ENV === 'production') {
+  const clientBuild = path.resolve(here, '../dist');
+  app.use(express.static(clientBuild));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
+    res.sendFile(path.join(clientBuild, 'index.html'), error => {
+      if (error) next(error);
+    });
+  });
+}
 app.use((err, _req, res, _next) => {
   console.error(err);
   res.status(500).json({ error: 'The server could not complete the request. Please try again.' });

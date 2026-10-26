@@ -51,12 +51,14 @@ Example task:
 }
 ```
 
-## Deployment notes
-- Existing public demo: [TaskFlow live app](https://taskflow-cql5pj.v2.appdeploy.ai/) (the AppDeploy build is separate from this repository's React/Express source).
-- Set `PORT` to the platform-provided port for the Express API.
-- Set `VITE_API_URL` at build time if the API is hosted on a separate domain. Configure CORS on the API host.
-- The JSON file database is suitable for demos and small coursework projects. For multi-instance production deployment, use a managed database.
-- The existing AppDeploy live app is separate from this downloadable project. The live AppDeploy source uses `@appdeploy/sdk`; this ZIP is a standalone equivalent project using Express and a local JSON store.
+## Deploy
+This repository is configured to deploy the React frontend and Express API together as one Render web service.
+
+1. Open [Deploy TaskFlow to Render](https://render.com/deploy?repo=https://github.com/Ibross10/task-management-system).
+2. Sign in to Render, connect the GitHub repository, and create the blueprint.
+3. Render builds the Vite app and serves it alongside the API. Copy the generated `.onrender.com` URL to share the app.
+
+After the first deployment, pushes to `main` trigger automatic redeploys. The free service stores tasks in its local JSON file, so data may reset when the service restarts. Use a managed database for durable production data.
 
 ## GitHub workflow checklist
 1. Create a feature branch for each logical change.
