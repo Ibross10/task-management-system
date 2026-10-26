@@ -52,6 +52,7 @@ Example task:
 ```
 
 ## Deployment notes
+- Existing public demo: [TaskFlow live app](https://taskflow-cql5pj.v2.appdeploy.ai/) (the AppDeploy build is separate from this repository's React/Express source).
 - Set `PORT` to the platform-provided port for the Express API.
 - Set `VITE_API_URL` at build time if the API is hosted on a separate domain. Configure CORS on the API host.
 - The JSON file database is suitable for demos and small coursework projects. For multi-instance production deployment, use a managed database.
