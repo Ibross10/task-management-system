@@ -35,6 +35,6 @@ Run `npm test` for unit tests or `npm run coverage` for a coverage report. Tests
 
 ## Project delivery
 - GitHub repository: https://github.com/Ibross10/task-management-system
-- Live application: Added after AppDeploy deployment
-- Figma wireframe: Added after Figma connection
+- Live application: https://taskflow-cql5pj.v2.appdeploy.ai/
+- Figma wireframe: To be added in Figma
 - License: MIT
