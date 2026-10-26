@@ -1,3 +1,31 @@
 {
-    "tasks": []
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Prepare project demo",
+      "description": "Review the task management workflow before the presentation.",
+      "category": "School",
+      "priority": "High",
+      "dueDate": "2026-10-30",
+      "completed": false
+    },
+    {
+      "id": "2",
+      "title": "Organize study notes",
+      "description": "Group notes by module and create revision tasks.",
+      "category": "Study",
+      "priority": "Medium",
+      "dueDate": "2026-11-02",
+      "completed": false
+    },
+    {
+      "id": "3",
+      "title": "Plan weekly review",
+      "description": "Reflect on completed tasks and adjust priorities.",
+      "category": "Personal",
+      "priority": "Low",
+      "dueDate": "2026-11-04",
+      "completed": true
+    }
+  ]
 }
