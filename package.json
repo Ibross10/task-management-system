@@ -1,7 +1,7 @@
 {
   "name": "task-management-system",
   "version": "1.0.0",
-  "description": "A Smart Task Management System built with JavaScript and a REST API",
+  "description": "A responsive task management system with a JSON Server REST API",
   "private": true,
   "type": "module",
   "scripts": {
@@ -21,6 +21,9 @@
   ],
   "license": "MIT",
   "devDependencies": {
-    "vite": "^8.3.5"
+    "@vitest/coverage-v8": "^3.2.4",
+    "json-server": "^1.0.0-beta.3",
+    "vite": "^8.3.5",
+    "vitest": "^3.2.4"
   }
 }
